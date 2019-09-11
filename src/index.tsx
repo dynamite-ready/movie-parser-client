@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './components/pages/App';
+import { Test } from './components/pages/Test';
 import { FluentCustomizations } from '@uifabric/fluent-theme';
 import { Customizer, mergeStyles } from 'office-ui-fabric-react';
 import { HashRouter, Route, Link } from "react-router-dom";
@@ -22,7 +23,8 @@ ReactDOM.render(
   <Customizer {...FluentCustomizations}>
     {/* <App /> */}
     <HashRouter>
-      <Route path="/" component={App}/>
+      <Route exact path="/" component={App}/>
+      <Route path="/test" component={Test}/>
     </HashRouter>   
   </Customizer>,
   document.getElementById('root')

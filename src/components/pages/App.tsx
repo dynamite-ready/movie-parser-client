@@ -24,7 +24,7 @@ export const App: React.FunctionComponent = () => {
         alt="logo"
       />
       <Text variant="xxLarge" styles={boldStyle}>
-        GAH
+        WAIT A SECOND...
       </Text>
       <Text variant="large">For a guide on how to customize this project, check out the UI Fabric documentation.</Text>
       <Text variant="large" styles={boldStyle}>
