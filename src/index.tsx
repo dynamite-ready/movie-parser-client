@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './App';
+import { App } from './components/pages/App';
 import { FluentCustomizations } from '@uifabric/fluent-theme';
 import { Customizer, mergeStyles } from 'office-ui-fabric-react';
+import { HashRouter, Route, Link } from "react-router-dom";
+
 import * as serviceWorker from './serviceWorker';
 
 // Inject some global styles
@@ -18,7 +20,10 @@ mergeStyles({
 
 ReactDOM.render(
   <Customizer {...FluentCustomizations}>
-    <App />
+    {/* <App /> */}
+    <HashRouter>
+      <Route path="/" component={App}/>
+    </HashRouter>   
   </Customizer>,
   document.getElementById('root')
 );
