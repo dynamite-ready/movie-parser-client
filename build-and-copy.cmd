@@ -1,0 +1,1 @@
+npm run build && cp -r build/. C:/Users/rick.charles/Desktop/movie-parser

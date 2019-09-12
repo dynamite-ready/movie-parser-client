@@ -14,7 +14,8 @@ mergeStyles({
     ':global(body), :global(html), :global(#root)': {
       margin: 0,
       padding: 0,
-      height: '100vh'
+      height: '100vh',
+      background: "#333333"
     }
   }
 });
@@ -23,8 +24,8 @@ ReactDOM.render(
   <Customizer {...FluentCustomizations}>
     {/* <App /> */}
     <HashRouter>
-      <Route exact path="/" component={App}/>
-      <Route path="/test" component={Test}/>
+      <Route exact path="/" component={Test}/>
+      <Route path="/test" component={App}/>
     </HashRouter>   
   </Customizer>,
   document.getElementById('root')
