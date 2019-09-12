@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Stack, Text, Link, FontWeights, SwatchColorPicker } from 'office-ui-fabric-react';
 
 const videoElementStyles = {
   display: "inline-block", 
@@ -8,7 +7,6 @@ const videoElementStyles = {
 };
 
 export const Test: React.FunctionComponent = () => {
-    const [colour, setColour] = useState();
     
     return (
       <div>

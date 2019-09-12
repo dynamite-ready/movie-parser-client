@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './components/pages/App';
+import { Header } from './components/pages/Header';
 import { Test } from './components/pages/Test';
 import { FluentCustomizations } from '@uifabric/fluent-theme';
 import { Customizer, mergeStyles } from 'office-ui-fabric-react';
@@ -22,10 +22,9 @@ mergeStyles({
 
 ReactDOM.render(
   <Customizer {...FluentCustomizations}>
-    {/* <App /> */}
     <HashRouter>
-      <Route exact path="/" component={Test}/>
-      <Route path="/test" component={App}/>
+      <Route path="/" component={Header}/>
+      <Route path="/test" component={Test}/>
     </HashRouter>   
   </Customizer>,
   document.getElementById('root')
