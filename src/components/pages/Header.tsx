@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { CommandBar } from 'office-ui-fabric-react/lib/CommandBar';
 
 const videoElementStyles = {
@@ -8,6 +8,21 @@ const videoElementStyles = {
 };
 
 export const Header: React.FunctionComponent = () => {
+  // win.showDevTools();
+
+  const [filename, setFilename] = useState(null);
+  const $fileUpload = useRef<HTMLInputElement>(document.createElement("input"));
+
+  const openFileDialog = () => {
+    if($fileUpload) {
+      $fileUpload.current.click();
+    }
+  }
+
+  const updateFilename = (e: any) => {
+    console.log(e);
+  }
+
   const menuItems = [
     {
       key: 'upload',
@@ -15,7 +30,7 @@ export const Header: React.FunctionComponent = () => {
       iconProps: {
         iconName: 'Upload'
       },
-      onClick: () => console.log('Download'),
+      onClick: openFileDialog,
       ['data-automation-id']: 'uploadButton'
     }
     // {
@@ -31,6 +46,8 @@ export const Header: React.FunctionComponent = () => {
     
   return (
     <div>
+        <input ref={$fileUpload} style={{display: "none"}} type="file" onChange={updateFilename}/>
+
         <CommandBar
           items={menuItems}
           overflowButtonProps={{ ariaLabel: 'More commands' }}
