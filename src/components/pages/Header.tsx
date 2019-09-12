@@ -8,7 +8,7 @@ const videoElementStyles = {
 };
 
 export const Header: React.FunctionComponent = () => {
-  // win.showDevTools();
+  win.showDevTools();
 
   const [filename, setFilename] = useState(null);
   const $fileUpload = useRef<HTMLInputElement>(document.createElement("input"));
